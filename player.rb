@@ -6,7 +6,7 @@ class Player
   end
 
   def strong?
-    true
+    @health >= 150
   end
   
   def health_down
@@ -20,7 +20,7 @@ class Player
   def to_s
     "#{@name} has a health of #{@health}"
   end
-  
+
 end
 if __FILE__ == $0
   player6 = Player.new("ricardo", 100)

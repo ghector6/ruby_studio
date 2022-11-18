@@ -26,5 +26,14 @@ describe Player do
   it "decreases health by 1" do
     expect(@player.health_down).to eq(@initial_health = 89)
   end
-  
+
+  context "A player with health higher or equal than 150" do
+    before do 
+      @player = Player.new("JoseJuan", 150)
+    end
+
+    it "he is so poweful" do
+      expect(@player.strong?).to eq(true)
+    end
+  end  
 end

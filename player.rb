@@ -4,10 +4,15 @@ class Player
     @name = name.reverse.capitalize
     @health = health    
   end
+
+  def strong?
+    true
+  end
   
   def health_down
     @health -= 1
   end
+
   def health_up
     @health += 1
   end
@@ -15,6 +20,7 @@ class Player
   def to_s
     "#{@name} has a health of #{@health}"
   end
+  
 end
 if __FILE__ == $0
   player6 = Player.new("ricardo", 100)

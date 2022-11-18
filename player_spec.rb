@@ -35,5 +35,13 @@ describe Player do
     it "he is so poweful" do
       expect(@player.strong?).to eq(true)
     end
+  end 
+  context "A players health is less than 150 " do
+    before do
+      @player = Player.new("Carlo", 100)
+    end
+    it "he is not that powerful" do
+      expect(@player.strong?).to eq(false)
+    end 
   end  
 end

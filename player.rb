@@ -8,9 +8,15 @@ class Player
   def strong?
     @health >= 150
   end
+  
   def status
-    "Is so strong!"
+    if strong?
+      "Is so strong!"
+    else
+      "Is not that strong!"
+    end
   end
+
   def health_down
     @health -= 1
   end

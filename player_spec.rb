@@ -35,6 +35,9 @@ describe Player do
     it "he is so poweful" do
       expect(@player.strong?).to eq(true)
     end
+    it "is so powerful status" do
+      expect(@player.status).to eq("Is so strong!")
+    end
   end 
   context "A players health is less than 150 " do
     before do

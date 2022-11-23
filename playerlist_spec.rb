@@ -19,6 +19,9 @@ describe Playerlist do
 			@playerlist.start_game(3)
 			expect(@player.health).to eq(@initial_health)
 		end
-
+		it "Gives the health a -1 if low number is rolled " do 
+			@playerlist.start_game(1)
+			expect(@player.health).to eq(@initial_health - 1)
+		end
 	end
 end

@@ -12,11 +12,14 @@ class Playerlist
     puts "#{@user_name}'s favorite players:"
     puts @users
     @users.each do |user|
-      if number_rolled < 5
+      if number_rolled < 3
+        user.health_down
+        puts "After receiving a magical attack:\n #{user}"
+      elsif number_rolled < 5
         puts "#{user.name} The attack missed and: \n #{user} "
       else
         user.health_up
-        puts "After receiving a physicall attack:\n #{user}"
+        puts "After receiving a potion attack:\n #{user}"
       end
         
     end

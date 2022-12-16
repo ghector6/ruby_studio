@@ -8,7 +8,11 @@ class Playerlist
   def add_player(player)
     @users << player
   end
-  def start_game(number_rolled)
+  def roll_die
+    rand(1..6)
+  end
+  def start_game
+    number_rolled = roll_die
     puts "#{@user_name}'s favorite players:"
     puts @users
     @users.each do |user|
